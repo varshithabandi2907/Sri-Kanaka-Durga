@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sri Kanaka Durga Cell Shoppe | Mobiles, Repairs &amp; Accessories in Mangalagiri</title>
+<meta name="description" content="Sri Kanaka Durga Cell Shoppe - Your trusted mobile store in Mangalagiri for sales, repairs, accessories, recharges and easy EMI finance. Call 99635 88815." />
+<meta name="theme-color" content="#4338ca" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B1%3C/text%3E%3C/svg%3E" />
+<style>
+/* ============================================================
+   SRI KANAKA DURGA CELL SHOPPE  —  single-file website
+   All CSS is embedded. No external files required.
+   ============================================================ */
+:root{
+  --indigo:#4f46e5;
+  --indigo-dark:#3730a3;
+  --indigo-deep:#1e1b4b;
+  --emerald:#059669;
+  --emerald-light:#10b981;
+  --whatsapp:#25D366;
+  --amber:#d97706;
+  --rose:#e11d48;
+  --ink:#0f172a;
+  --slate:#475569;
+  --slate-light:#64748b;
+  --line:#e2e8f0;
+  --bg-soft:#f8fafc;
+  --white:#ffffff;
+  --radius:18px;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.08);
+  --shadow-md:0 6px 20px rgba(15,23,42,.08);
+  --shadow-lg:0 18px 40px rgba(15,23,42,.14);
+  --max:1180px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+  -webkit-tap-highlight-color:transparent;
+}
+body{
+  font-family:'Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.65;
+  overflow-x:hidden;
+  padding-bottom:0;
+}
+img,svg,iframe{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ul{list-style:none}
+::selection{background:var(--indigo);color:#fff}
+/* ---------- scrollbar ---------- */
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:#f1f5f9}
+::-webkit-scrollbar-thumb{background:#c7d2fe;border-radius:99px}
+::-webkit-scrollbar-thumb:hover{background:#a5b4fc}
+/* ---------- layout helpers ---------- */
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+.section{padding:84px 0}
+.section--soft{background:var(--bg-soft)}
+.section--white{background:var(--white)}
+.center{text-align:center}
+.eyebrow{
+  display:inline-block;
+  background:#e0e7ff;color:var(--indigo-dark);
+  font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  padding:.35rem 1rem;border-radius:99px;
+}
+.section--soft .eyebrow,.eyebrow--light{background:rgba(255,255,255,.16);color:#fff}
+h1,h2,h3,h4{line-height:1.2;letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-top:16px}
+.lead{color:var(--slate);max-width:620px;margin:14px auto 0;font-size:1rem}
+.lead--light{color:#cbd5e1}
+.grid{display:grid;gap:20px}
+.mt{margin-top:56px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* anchor offset for fixed header */
+section[id]{scroll-margin-top:78px}
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  padding:.9rem 1.6rem;border-radius:99px;
+  font-size:.9rem;font-weight:700;
+  transition:transform .2s,background .2s,box-shadow .2s,color .2s,border-color .2s;
+  will-change:transform;
+}
+.btn:hover{transform:translateY(-3px)}
+.btn--call{background:var(--emerald);color:#fff;box-shadow:0 10px 24px rgba(5,150,105,.28)}
+.btn--call:hover{background:#047857}
+.btn--wa{background:var(--whatsapp);color:#fff;box-shadow:0 10px 24px rgba(37,211,102,.28)}
+.btn--wa:hover{filter:brightness(.94)}
+.btn--map{border:2px solid #fff;color:#fff}
+.btn--map:hover{background:rgba(255,255,255,.12)}
+.btn--outline{border:2px solid var(--indigo);color:var(--indigo-dark)}
+.btn--outline:hover{background:#eef2ff}
+.btn--solid{background:var(--indigo);color:#fff;box-shadow:0 10px 24px rgba(79,70,229,.28)}
+.btn--solid:hover{background:var(--indigo-dark)}
+.btn--white{background:#fff;color:var(--indigo-dark);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header{
+  position:fixed;inset:0 0 auto 0;z-index:100;
+  padding:16px 0;
+  transition:background .3s,padding .3s,box-shadow .3s;
+}
+.header.is-stuck{
+  background:rgba(255,255,255,.93);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  padding:9px 0;
+  box-shadow:var(--shadow-sm);
+  border-bottom:1px solid var(--line);
+}
+.header__inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand__mark{
+  flex:0 0 42px;height:42px;border-radius:13px;
+  display:grid;place-items:center;font-size:1.15rem;
+  background:rgba(255,255,255,.16);color:#fff;
+  border:1px solid rgba(255,255,255,.3);
+  backdrop-filter:blur(6px);
+  transition:background .3s,color .3s,border-color .3s;
+}
+.header.is-stuck .brand__mark{
+  background:linear-gradient(140deg,var(--indigo),var(--indigo-dark));
+  color:#fff;border-color:transparent;
+}
+.brand__name{display:block;font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:#fff;transition:color .3s}
+.brand__sub{display:block;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:#c7d2fe;transition:color .3s}
+.header.is-stuck .brand__name{color:var(--indigo-dark)}
+.header.is-stuck .brand__sub{color:var(--slate-light)}
+.nav{display:none;align-items:center;gap:2px}
+.nav a{
+  padding:.5rem .9rem;border-radius:99px;
+  font-size:.86rem;font-weight:600;color:#e2e8f0;
+  transition:background .2s,color .2s;
+}
+.nav a:hover{background:rgba(255,255,255,.12);color:#fff}
+.nav a.is-active{background:rgba(255,255,255,.2);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.header.is-stuck .nav a{color:var(--slate)}
+.header.is-stuck .nav a:hover{background:#f1f5f9;color:var(--ink)}
+.header.is-stuck .nav a.is-active{background:var(--indigo);color:#fff;box-shadow:none}
+.header__call{
+  display:none;align-items:center;gap:.45rem;
+  background:var(--emerald);color:#fff;
+  padding:.6rem 1.05rem;border-radius:99px;font-size:.85rem;font-weight:700;
+  box-shadow:0 8px 18px rgba(5,150,105,.25);
+  transition:background .2s,transform .2s;
+}
+.header__call:hover{background:#047857;transform:translateY(-2px)}
+.burger{
+  width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
+  color:#fff;font-size:1.4rem;line-height:1;transition:color .3s,background .2s;
+}
+.header.is-stuck .burger{color:var(--ink)}
+.burger:hover{background:rgba(255,255,255,.14)}
+.header.is-stuck .burger:hover{background:#f1f5f9}
+.drawer{
+  display:grid;grid-template-rows:0fr;
+  background:#fff;border-top:1px solid transparent;
+  transition:grid-template-rows .32s ease,border-color .32s;
+  overflow:hidden;
+}
+.drawer.is-open{grid-template-rows:1fr;border-color:var(--line)}
+.drawer__inner{overflow:hidden;min-height:0}
+.drawer nav{display:flex;flex-direction:column;gap:4px;padding:14px 20px 20px}
+.drawer nav a{
+  padding:.85rem 1rem;border-radius:12px;
+  font-size:.92rem;font-weight:600;color:#334155;transition:background .2s,color .2s;
+}
+.drawer nav a:hover{background:#f1f5f9}
+.drawer nav a.is-active{background:var(--indigo);color:#fff}
+.drawer__actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 420px at 12% 18%,rgba(79,70,229,.5),transparent 60%),
+    radial-gradient(760px 400px at 88% 82%,rgba(16,185,129,.32),transparent 60%),
+    linear-gradient(165deg,#0b1024 0%,#171a3d 45%,#0b1024 100%);
+  color:#fff;
+  padding:150px 0 110px;
+  text-align:center;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.09) 1px,transparent 1px);
+  background-size:26px 26px;
+  mask-image:radial-gradient(circle at 50% 40%,#000,transparent 72%);
+  -webkit-mask-image:radial-gradient(circle at 50% 40%,#000,transparent 72%);
+}
+.hero__inner{position:relative;z-index:2;max-width:820px;margin:0 auto;padding:0 20px}
+.hero__badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
+  backdrop-filter:blur(6px);
+  padding:.45rem 1.05rem;border-radius:99px;
+  font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#c7d2fe;
+}
+.hero h1{
+  margin-top:24px;
+  font-size:clamp(2.2rem,7vw,3.9rem);
+  font-weight:900;line-height:1.07;
+}
+.hero h1 span{
+  display:block;margin-top:8px;
+  background:linear-gradient(100deg,#a5b4fc,#7dd3fc,#6ee7b7);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p{margin:22px auto 0;max-width:600px;color:#cbd5e1;font-size:clamp(.95rem,2vw,1.1rem)}
+.hero__cta{margin-top:34px}
+.hero__trust{
+  margin-top:44px;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 30px;
+  font-size:.85rem;color:#94a3b8;
+}
+.hero__trust span{display:inline-flex;align-items:center;gap:.45rem}
+.hero__trust b{color:#fbbf24}
+.hero__wave{position:absolute;left:0;right:0;bottom:-1px;z-index:1;color:#fff}
+.hero__wave svg{width:100%;height:64px}
+/* ============================================================
+   CARDS
+   ============================================================ */
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;box-shadow:var(--shadow-sm);
+  transition:transform .28s,box-shadow .28s,border-color .28s;
+  height:100%;
+}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:#c7d2fe}
+.card__icon{
+  width:52px;height:52px;border-radius:15px;
+  display:grid;place-items:center;font-size:1.5rem;margin-bottom:16px;
+}
+.card h3{font-size:1.06rem;font-weight:800}
+.card p{margin-top:8px;font-size:.88rem;color:var(--slate-light)}
+.card__link{
+  margin-top:16px;display:inline-flex;align-items:center;gap:.35rem;
+  font-size:.85rem;font-weight:700;color:var(--indigo);
+}
+.card:hover .card__link svg{transform:translateX(4px)}
+.card__link svg{transition:transform .25s}
+.t-indigo{background:#e0e7ff;color:#4338ca}
+.t-amber{background:#fef3c7;color:#b45309}
+.t-emerald{background:#d1fae5;color:#047857}
+.t-rose{background:#ffe4e6;color:#be123c}
+/* ---------- services ---------- */
+.services{grid-template-columns:1fr}
+@media(min-width:640px){.services{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.services{grid-template-columns:repeat(4,1fr)}}
+.service{display:block}
+/* ---------- brands ---------- */
+.brands{grid-template-columns:1fr 1fr}
+@media(min-width:640px){.brands{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1024px){.brands{grid-template-columns:repeat(6,1fr)}}
+.brand-tile{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:26px 12px;text-align:center;box-shadow:var(--shadow-sm);
+  transition:transform .28s,box-shadow .28s;
+}
+.brand-tile:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.brand-tile span{font-size:1.12rem;font-weight:900;letter-spacing:-.02em}
+.g-oppo{background:linear-gradient(90deg,#10b981,#0d9488);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g-realmе{background:linear-gradient(90deg,#fbbf24,#eab308);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g-realme{background:linear-gradient(90deg,#fbbf24,#eab308);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g-vivo{background:linear-gradient(90deg,#0ea5e9,#2563eb);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g-oneplus{background:linear-gradient(90deg,#f43f5e,#dc2626);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g-xiaomi{background:linear-gradient(90deg,#f97316,#ea580c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.g-moto{background:linear-gradient(90deg,#6366f1,#7c3aed);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* ---------- mobile brand cards ---------- */
+.mobiles{grid-template-columns:1fr}
+@media(min-width:640px){.mobiles{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.mobiles{grid-template-columns:repeat(3,1fr)}}
+.phone{position:relative;text-align:center;overflow:hidden}
+.phone::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(160deg,#fff,#f8fafc);
+  z-index:-1;
+}
+.phone__mark{
+  width:56px;height:56px;margin:0 auto 14px;border-radius:16px;
+  display:grid;place-items:center;font-size:1.5rem;
+  background:linear-gradient(140deg,#1e293b,#0f172a);color:#fff;
+  transition:transform .3s;
+}
+.phone:hover .phone__mark{transform:scale(1.1) rotate(-4deg)}
+.phone h3{font-size:1.55rem;font-weight:900}
+.phone p{margin-top:8px}
+/* ---------- highlights ---------- */
+.highlights{grid-template-columns:1fr;margin-top:20px}
+@media(min-width:640px){.highlights{grid-template-columns:repeat(3,1fr)}}
+.hl{display:flex;gap:14px;align-items:flex-start}
+.hl__icon{
+  flex:0 0 44px;height:44px;border-radius:13px;display:grid;place-items:center;
+  font-size:1.2rem;background:#e0e7ff;
+}
+.hl h4{font-size:.96rem;font-weight:800}
+.hl p{margin-top:4px;font-size:.85rem;color:var(--slate-light)}
+/* ---------- repair process timeline ---------- */
+.process{position:relative;margin-top:56px}
+.process__line{
+  position:absolute;top:26px;left:0;right:0;height:2px;display:none;
+  background:linear-gradient(90deg,#c7d2fe,#a5b4fc,#c7d2fe);
+}
+@media(min-width:1024px){.process__line{display:block}}
+.process__grid{grid-template-columns:1fr}
+@media(min-width:640px){.process__grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.process__grid{grid-template-columns:repeat(4,1fr)}}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;text-align:center;box-shadow:var(--shadow-sm)}
+.step__num{
+  width:48px;height:48px;margin:0 auto 14px;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--indigo);color:#fff;font-weight:800;font-size:1rem;
+  box-shadow:0 0 0 5px var(--bg-soft);
+}
+.step h3{font-size:1rem;font-weight:800}
+.step p{margin-top:7px;font-size:.86rem;color:var(--slate-light)}
+/* ---------- assurance ---------- */
+.assure{grid-template-columns:1fr;margin-top:64px}
+@media(min-width:640px){.assure{grid-template-columns:repeat(3,1fr)}}
+.assure__item{display:flex;align-items:center;gap:14px}
+.assure__item>span{font-size:1.7rem}
+/* ---------- accessories ---------- */
+.acc{grid-template-columns:1fr 1fr}
+@media(min-width:640px){.acc{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1024px){.acc{grid-template-columns:repeat(4,1fr)}}
+.acc .card{background:linear-gradient(165deg,#fff,#f0fdf9);text-align:center;display:flex;flex-direction:column;align-items:center}
+.acc .card__icon{background:#d1fae5;color:#047857}
+.acc h3{font-size:.94rem}
+.acc p{font-size:.8rem}
+.panel{
+  margin-top:64px;background:linear-gradient(150deg,#111827,#0b1024);
+  color:#fff;border-radius:26px;padding:52px 26px;text-align:center;
+}
+.panel h3{font-size:clamp(1.4rem,3.4vw,1.95rem);font-weight:800}
+.panel p{margin:14px auto 0;max-width:600px;color:#cbd5e1}
+.panel .btn-row{margin-top:30px}
+/* ============================================================
+   FINANCE
+   ============================================================ */
+.finance{
+  position:relative;overflow:hidden;color:#fff;
+  background:
+    radial-gradient(700px 380px at 15% 15%,rgba(99,102,241,.45),transparent 62%),
+    radial-gradient(700px 380px at 88% 85%,rgba(16,185,129,.3),transparent 62%),
+    linear-gradient(150deg,#3730a3,#1e1b4b 55%,#0b1024);
+}
+.finance__steps{grid-template-columns:1fr}
+@media(min-width:640px){.finance__steps{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.finance__steps{grid-template-columns:repeat(4,1fr)}}
+.glass{
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);
+  border-radius:var(--radius);padding:26px;text-align:center;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  transition:transform .28s,background .28s;
+}
+.glass:hover{transform:translateY(-6px);background:rgba(255,255,255,.15)}
+.glass__icon{width:48px;height:48px;margin:0 auto 14px;border-radius:14px;display:grid;place-items:center;font-size:1.3rem;background:rgba(255,255,255,.16)}
+.glass__step{font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#c7d2fe}
+.glass h3{margin-top:4px;font-size:1rem;font-weight:800}
+.glass p{margin-top:7px;font-size:.86rem;color:#e0e7ff}
+.finance__split{
+  margin-top:64px;display:grid;gap:36px;align-items:center;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  border-radius:26px;padding:36px 26px;
+}
+@media(min-width:900px){.finance__split{grid-template-columns:1fr 1fr;padding:48px}}
+.finance__split h3{font-size:clamp(1.35rem,3.4vw,1.9rem);font-weight:800;margin-top:14px}
+.checks{margin-top:24px;display:grid;gap:13px}
+.checks li{display:flex;gap:.7rem;align-items:flex-start;color:#e0e7ff;font-size:.93rem}
+.checks li::before{content:"✓";flex:0 0 22px;height:22px;border-radius:50%;background:rgba(16,185,129,.9);color:#fff;font-size:.75rem;font-weight:800;display:grid;place-items:center;margin-top:2px}
+.emi-card{background:#fff;color:var(--ink);border-radius:20px;padding:34px 26px;text-align:center;box-shadow:var(--shadow-lg)}
+.emi-card__label{font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--indigo)}
+.emi-card h4{margin-top:12px;font-size:1.08rem;font-weight:800;line-height:1.45}
+.emi-card .btn{width:100%;margin-top:22px}
+.emi-card small{display:block;margin-top:14px;font-size:.75rem;color:var(--slate-light)}
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact{grid-template-columns:1fr;gap:32px}
+@media(min-width:1024px){.contact{grid-template-columns:1fr 1fr;gap:34px}}
+.contact__list{display:grid;gap:14px}
+.info{display:flex;gap:16px;align-items:flex-start}
+.info__icon{flex:0 0 48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.25rem}
+.info h3{font-size:.98rem;font-weight:800}
+.info p{font-size:.88rem;color:var(--slate-light)}
+.info a.info__link{display:inline-block;margin-top:5px;font-size:.86rem;font-weight:700;color:var(--indigo)}
+.info a.info__link:hover{text-decoration:underline}
+.info strong{font-size:1.05rem;color:var(--ink)}
+.map{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-md);background:#e2e8f0}
+.map iframe{width:100%;height:400px;border:0}
+.contact__cta{margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-sm);text-align:center}
+.contact__cta h3{font-size:1.05rem;font-weight:800}
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{background:#080c1a;color:#94a3b8;padding:64px 0 0}
+.footer__grid{display:grid;gap:36px}
+@media(min-width:768px){.footer__grid{grid-template-columns:1.4fr 1fr 1fr 1.3fr}}
+.footer h4{font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:18px}
+.footer p{font-size:.88rem}
+.footer ul{display:grid;gap:11px;font-size:.88rem}
+.footer a:hover{color:#a5b4fc}
+.footer .brand__name{color:#fff}
+.footer .brand__sub{color:#a5b4fc}
+.footer__ proprietor,.prop{margin-top:12px}
+.footer__bar{margin-top:48px;border-top:1px solid rgba(255,255,255,.09)}
+.footer__bar-inner{
+  display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:12px;
+  padding:22px 0;font-size:.78rem;
+}
+@media(min-width:640px){.footer__bar-inner{flex-direction:row}}
+.to-top{display:inline-flex;align-items:center;gap:.35rem;font-weight:700;color:#e2e8f0}
+.to-top:hover{color:#a5b4fc}
+/* ============================================================
+   FLOATING BUTTONS + BACK TO TOP
+   ============================================================ */
+.float{position:fixed;right:16px;bottom:20px;z-index:90;display:grid;gap:12px}
+.float a{
+  width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
+  color:#fff;font-size:1.4rem;box-shadow:0 12px 26px rgba(15,23,42,.28);
+  transition:transform .22s;
+}
+.float a:hover{transform:scale(1.1)}
+.float__wa{background:var(--whatsapp)}
+.float__call{background:var(--indigo)}
+.to-top-btn{
+  position:fixed;right:16px;bottom:150px;z-index:89;
+  width:44px;height:44px;border-radius:50%;
+  background:#fff;color:var(--indigo);border:1px solid var(--line);
+  box-shadow:var(--shadow-md);font-size:1.1rem;
+  opacity:0;pointer-events:none;transform:translateY(10px);
+  transition:opacity .25s,transform .25s;
+}
+.to-top-btn.is-visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+/* ============================================================
+   REVEAL ANIMATION
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.is-in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
+/* small-screen nav defaults */
+@media(min-width:1024px){
+  .nav{display:flex}
+  .header__call{display:inline-flex}
+  .burger,.drawer{display:none}
+}
+</style>
+</head>
+<body>
+<!-- ============================ HEADER ============================ -->
+<header class="header" id="header">
+  <div class="wrap header__inner">
+    <a href="#home" class="brand">
+      <span class="brand__mark">📱</span>
+      <span>
+        <span class="brand__name">Sri Kanaka Durga</span>
+        <span class="brand__sub">Cell Shoppe</span>
+      </span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#home" class="is-active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#mobiles">Mobiles</a>
+      <a href="#repair">Repair</a>
+      <a href="#accessories">Accessories</a>
+      <a href="#finance">Finance</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:9963588815" class="header__call">📞 <span>99635 88815</span></a>
+    <button class="burger" id="burger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </div>
+  <div class="drawer" id="drawer">
+    <div class="drawer__inner">
+      <nav>
+        <a href="#home" class="is-active">Home</a>
+        <a href="#services">Services</a>
+        <a href="#mobiles">Mobiles</a>
+        <a href="#repair">Repair</a>
+        <a href="#accessories">Accessories</a>
+        <a href="#finance">Finance</a>
+        <a href="#contact">Contact</a>
+        <div class="drawer__actions">
+          <a href="tel:9963588815" class="btn btn--call">📞 Call Now</a>
+          <a href="#contact" class="btn btn--outline">📍 Directions</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<main>
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="home">
+  <div class="hero__inner">
+    <span class="hero__badge">📍 Opp. Municipal Office, G.T. Road, Mangalagiri</span>
+    <h1>
+      Your Trusted Mobile Store
+      <span>in Mangalagiri</span>
+    </h1>
+    <p>
+      Mobiles &bull; Repairs &bull; Accessories &bull; Recharges — all under one roof,
+      backed by genuine products, honest prices and easy EMI finance.
+    </p>
+    <div class="btn-row hero__cta">
+      <a href="tel:9963588815" class="btn btn--call">📞 Call 99635 88815</a>
+      <a href="https://wa.me/919963588815?text=Hi!%20I'd%20like%20to%20know%20more%20about%20mobiles%2Fservices%20at%20Sri%20Kanaka%20Durga%20Cell%20Shoppe." target="_blank" rel="noopener" class="btn btn--wa">💬 WhatsApp</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Sri%20Kanaka%20Durga%20Cell%20Shoppe%2C%20G.T.%20Road%2C%20Mangalagiri%2C%20Andhra%20Pradesh%20522503" target="_blank" rel="noopener" class="btn btn--map">📍 Get Directions</a>
+    </div>
+    <div class="hero__trust">
+      <span><b>★</b> Genuine Products</span>
+      <span><b>★</b> Same-Day Repairs</span>
+      <span><b>★</b> Easy EMI Available</span>
+    </div>
+  </div>
+  <div class="hero__wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" fill="currentColor">
+      <path d="M0 80V40C240 0 480 0 720 24C960 48 1200 48 1440 16V80H0Z"/>
+    </svg>
+  </div>
+</section>
+<!-- ============================ SERVICES ============================ -->
+<section class="section section--white" id="services">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">What We Offer</span>
+      <h2>Everything for Your Mobile Needs</h2>
+      <p class="lead">Four simple services, one trusted shop right on G.T. Road.</p>
+    </div>
+    <div class="grid services mt">
+      <a href="#mobiles" class="card service reveal">
+        <span class="card__icon t-indigo">📱</span>
+        <h3>Mobile Sales</h3>
+        <p>Latest smartphones from all top brands with genuine billing &amp; warranty.</p>
+        <span class="card__link">View details <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a href="#repair" class="card service reveal" style="transition-delay:.09s">
+        <span class="card__icon t-amber">🔧</span>
+        <h3>Mobile Repair</h3>
+        <p>Screen, battery, charging port and software issues fixed by experts.</p>
+        <span class="card__link">View details <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a href="#accessories" class="card service reveal" style="transition-delay:.18s">
+        <span class="card__icon t-emerald">🎧</span>
+        <h3>Accessories</h3>
+        <p>Chargers, earphones, cases, tempered glass and much more in stock.</p>
+        <span class="card__link">View details <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a href="#contact" class="card service reveal" style="transition-delay:.27s">
+        <span class="card__icon t-rose">⚡</span>
+        <h3>Recharges</h3>
+        <p>Instant mobile &amp; DTH recharges for every network, done in seconds.</p>
+        <span class="card__link">View details <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- ============================ BRANDS + WHY US ============================ -->
+<section class="section section--soft" id="brands">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Popular Brands</span>
+      <h2>Brands We Deal In</h2>
+      <p class="lead">Multi-brand stock — pick the phone that suits you best.</p>
+    </div>
+    <div class="grid brands mt">
+      <div class="brand-tile reveal"><span class="g-oppo">OPPO</span></div>
+      <div class="brand-tile reveal" style="transition-delay:.07s"><span class="g-realme">realme</span></div>
+      <div class="brand-tile reveal" style="transition-delay:.14s"><span class="g-vivo">vivo</span></div>
+      <div class="brand-tile reveal" style="transition-delay:.21s"><span class="g-oneplus">OnePlus</span></div>
+      <div class="brand-tile reveal" style="transition-delay:.28s"><span class="g-xiaomi">Xiaomi</span></div>
+      <div class="brand-tile reveal" style="transition-delay:.35s"><span class="g-moto">Motorola</span></div>
+    </div>
+    <!-- WHY US -->
+    <div class="mt" style="margin-top:88px">
+      <div class="center reveal">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2>Why Customers Keep Coming Back</h2>
+      </div>
+      <div class="grid" style="grid-template-columns:1fr;margin-top:52px">
+        <div class="card reveal center">
+          <span class="card__icon t-indigo" style="margin-left:auto;margin-right:auto">🛡️</span>
+          <h3>Genuine Products</h3>
+          <p>100% authentic mobiles and accessories with proper bills &amp; warranty.</p>
+        </div>
+        <div class="card reveal center" style="transition-delay:.09s">
+          <span class="card__icon t-amber" style="margin-left:auto;margin-right:auto">🔧</span>
+          <h3>Expert Repair Service</h3>
+          <p>Quick, reliable repairs for all major smartphone brands.</p>
+        </div>
+        <div class="card reveal center" style="transition-delay:.18s">
+          <span class="card__icon t-emerald" style="margin-left:auto;margin-right:auto">📦</span>
+          <h3>Multiple Brands</h3>
+          <p>OPPO, realme, vivo, OnePlus, Xiaomi &amp; Motorola under one roof.</p>
+        </div>
+        <div class="card reveal center" style="transition-delay:.27s">
+          <span class="card__icon t-rose" style="margin-left:auto;margin-right:auto">💳</span>
+          <h3>Easy Finance Options</h3>
+          <p>Buy your favourite phone now and pay later with EMIs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============================ MOBILES ============================ -->
+<section class="section section--white" id="mobiles">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Mobiles</span>
+      <h2>New Phones from Every Leading Brand</h2>
+      <p class="lead">From flagship phones to reliable budget devices — we'll help you find the right one for your budget.</p>
+    </div>
+    <div class="grid mobiles mt">
+      <div class="card phone reveal">
+        <span class="phone__mark">📱</span>
+        <h3 class="g-oppo">OPPO</h3>
+        <p>Latest OPPO smartphones in stock. Visit the store or call us for today's price &amp; offers.</p>
+        <a href="tel:9963588815" class="card__link">Check availability ↗</a>
+      </div>
+      <div class="card phone reveal" style="transition-delay:.07s">
+        <span class="phone__mark">📱</span>
+        <h3 class="g-realme">realme</h3>
+        <p>Latest realme smartphones in stock. Visit the store or call us for today's price &amp; offers.</p>
+        <a href="tel:9963588815" class="card__link">Check availability ↗</a>
+      </div>
+      <div class="card phone reveal" style="transition-delay:.14s">
+        <span class="phone__mark">📱</span>
+        <h3 class="g-vivo">vivo</h3>
+        <p>Latest vivo smartphones in stock. Visit the store or call us for today's price &amp; offers.</p>
+        <a href="tel:9963588815" class="card__link">Check availability ↗</a>
+      </div>
+      <div class="card phone reveal" style="transition-delay:.21s">
+        <span class="phone__mark">📱</span>
+        <h3 class="g-oneplus">OnePlus</h3>
+        <p>Latest OnePlus smartphones in stock. Visit the store or call us for today's price &amp; offers.</p>
+        <a href="tel:9963588815" class="card__link">Check availability ↗</a>
+      </div>
+      <div class="card phone reveal" style="transition-delay:.28s">
+        <span class="phone__mark">📱</span>
+        <h3 class="g-xiaomi">Xiaomi</h3>
+        <p>Latest Xiaomi smartphones in stock. Visit the store or call us for today's price &amp; offers.</p>
+        <a href="tel:9963588815" class="card__link">Check availability ↗</a>
+      </div>
+      <div class="card phone reveal" style="transition-delay:.35s">
+        <span class="phone__mark">📱</span>
+        <h3 class="g-moto">Motorola</h3>
+        <p>Latest Motorola smartphones in stock. Visit the store or call us for today's price &amp; offers.</p>
+        <a href="tel:9963588815" class="card__link">Check availability ↗</a>
+      </div>
+    </div>
+    <div class="grid highlights">
+      <div class="card hl reveal">
+        <span class="hl__icon">✨</span>
+        <div><h4>Latest Launches</h4><p>Fresh stock of the newest models as soon as they launch.</p></div>
+      </div>
+      <div class="card hl reveal" style="transition-delay:.09s">
+        <span class="hl__icon">🧾</span>
+        <div><h4>Genuine Billing</h4><p>Every device sold with proper invoice and brand warranty.</p></div>
+      </div>
+      <div class="card hl reveal" style="transition-delay:.18s">
+        <span class="hl__icon">🔄</span>
+        <div><h4>Exchange Offers</h4><p>Exchange your old phone and upgrade at a great value.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============================ REPAIR ============================ -->
+<section class="section section--soft" id="repair">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Repair Service</span>
+      <h2>Fast &amp; Reliable Mobile Repairs</h2>
+      <p class="lead">Cracked screen, weak battery or software trouble? Our technicians fix all major brands using quality spare parts.</p>
+    </div>
+    <div class="grid mobiles mt">
+      <div class="card reveal">
+        <span class="card__icon t-amber">🖥️</span>
+        <h3>Screen Replacement</h3>
+        <p>Cracked or unresponsive display? Quality replacement screens fitted for all major brands.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.07s">
+        <span class="card__icon t-amber">🔋</span>
+        <h3>Battery Replacement</h3>
+        <p>Phone draining fast or switching off suddenly? Get a fresh, reliable battery.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.14s">
+        <span class="card__icon t-amber">🔌</span>
+        <h3>Charging Problems</h3>
+        <p>Loose port, slow charging or 'not charging' errors fixed in no time.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.21s">
+        <span class="card__icon t-amber">🧠</span>
+        <h3>Software Problems</h3>
+        <p>Hangs, restarts, virus issues, updates and software resets handled carefully.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.28s">
+        <span class="card__icon t-amber">💧</span>
+        <h3>Water Damage Repair</h3>
+        <p>Dropped your phone in water? Bring it in quickly for the best chance of recovery.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.35s">
+        <span class="card__icon t-amber">🛠️</span>
+        <h3>Other Repairs</h3>
+        <p>Speaker, mic, camera, buttons, back panel &amp; more — just ask, we probably fix it.</p>
+      </div>
+    </div>
+    <!-- PROCESS -->
+    <div class="center reveal" style="margin-top:88px">
+      <span class="eyebrow">How It Works</span>
+      <h2>Simple, Transparent Repair Process</h2>
+    </div>
+    <div class="process">
+      <span class="process__line" aria-hidden="true"></span>
+      <div class="grid process__grid">
+        <div class="step reveal">
+          <span class="step__num">1</span>
+          <h3>Bring or Call Us</h3>
+          <p>Visit the store or call us to describe the issue.</p>
+        </div>
+        <div class="step reveal" style="transition-delay:.11s">
+          <span class="step__num">2</span>
+          <h3>Device Inspection</h3>
+          <p>Our technician checks the device to understand the issue.</p>
+        </div>
+        <div class="step reveal" style="transition-delay:.22s">
+          <span class="step__num">3</span>
+          <h3>Quick Repair</h3>
+          <p>Most common repairs are completed the very same day.</p>
+        </div>
+        <div class="step reveal" style="transition-delay:.33s">
+          <span class="step__num">4</span>
+          <h3>Quality Check</h3>
+          <p>Every repair is tested before it goes back to you.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ASSURANCE -->
+    <div class="grid assure">
+      <div class="card assure__item reveal">
+        <span>⏱️</span>
+        <div><h4>Same-Day Service</h4><p>Most repairs finished the same day</p></div>
+      </div>
+      <div class="card assure__item reveal" style="transition-delay:.09s">
+        <span>🛡️</span>
+        <div><h4>Warranty on Repairs</h4><p>Peace of mind after every fix</p></div>
+      </div>
+      <div class="card assure__item reveal" style="transition-delay:.18s">
+        <span>✅</span>
+        <div><h4>Genuine Spare Parts</h4><p>Quality parts you can trust</p></div>
+      </div>
+    </div>
+    <div class="center reveal" style="margin-top:64px">
+      <h2 style="font-size:clamp(1.35rem,3.4vw,1.9rem)">Got a mobile issue? Let's fix it today.</h2>
+      <p class="lead">Call or drop by the store — device inspection is free and we always quote before we repair.</p>
+      <div class="btn-row" style="margin-top:28px">
+        <a href="tel:9963588815" class="btn btn--call">📞 Call Now</a>
+        <a href="https://wa.me/919963588815?text=Hi!%20My%20phone%20needs%20a%20repair.%20Can%20you%20help%3F" target="_blank" rel="noopener" class="btn btn--wa">💬 WhatsApp</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Sri%20Kanaka%20Durga%20Cell%20Shoppe%2C%20G.T.%20Road%2C%20Mangalagiri%2C%20Andhra%20Pradesh%20522503" target="_blank" rel="noopener" class="btn btn--outline">📍 Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============================ ACCESSORIES ============================ -->
+<section class="section section--white" id="accessories">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Accessories</span>
+      <h2>Every Mobile Accessory You Need</h2>
+      <p class="lead">Chargers, earphones, cases, tempered glass and more — original quality at fair prices.</p>
+    </div>
+    <div class="grid acc mt">
+      <div class="card reveal"><span class="card__icon">🔌</span><h3>Chargers</h3><p>Fast chargers &amp; adapters for every brand.</p></div>
+      <div class="card reveal" style="transition-delay:.08s"><span class="card__icon">🎵</span><h3>Earphones</h3><p>Wired &amp; wireless earphones for music and calls.</p></div>
+      <div class="card reveal" style="transition-delay:.16s"><span class="card__icon">🎧</span><h3>Headphones</h3><p>Over-ear headphones, wired and Bluetooth.</p></div>
+      <div class="card reveal" style="transition-delay:.24s"><span class="card__icon">🔗</span><h3>Cables</h3><p>USB-C, Micro-USB &amp; Lightning, fast and durable.</p></div>
+      <div class="card reveal" style="transition-delay:.32s"><span class="card__icon">🛡️</span><h3>Cases &amp; Covers</h3><p>Stylish, protective covers for popular models.</p></div>
+      <div class="card reveal" style="transition-delay:.40s"><span class="card__icon">📱</span><h3>Screen Protectors</h3><p>Tempered glass fitted while you wait.</p></div>
+      <div class="card reveal" style="transition-delay:.48s"><span class="card__icon">⌚</span><h3>Smartwatches</h3><p>Trendy smartwatches and fitness bands.</p></div>
+      <div class="card reveal" style="transition-delay:.56s"><span class="card__icon">📦</span><h3>Other Accessories</h3><p>Power banks, memory cards, holders &amp; more.</p></div>
+    </div>
+    <div class="panel reveal">
+      <h3>Original Accessories, Fair Prices</h3>
+      <p>We only sell accessories that are safe for your device — no cheap imports that damage your battery or charging port.</p>
+      <div class="btn-row">
+        <a href="tel:9963588815" class="btn btn--call">📞 Call Now</a>
+        <a href="https://wa.me/919963588815?text=Hi!%20I'm%20looking%20for%20an%20accessory.%20Do%20you%20have%20it%20in%20stock%3F" target="_blank" rel="noopener" class="btn btn--wa">💬 WhatsApp</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Sri%20Kanaka%20Durga%20Cell%20Shoppe%2C%20G.T.%20Road%2C%20Mangalagiri%2C%20Andhra%20Pradesh%20522503" target="_blank" rel="noopener" class="btn btn--map">📍 Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============================ FINANCE ============================ -->
+<section class="section finance" id="finance">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow eyebrow--light">Finance</span>
+      <h2 style="color:#fff">Easy EMI / Finance Available</h2>
+      <p class="lead lead--light">Don't let budget hold you back. Take your phone home today and pay comfortably every month.</p>
+    </div>
+    <div class="grid finance__steps mt">
+      <div class="glass reveal">
+        <span class="glass__icon">📄</span>
+        <span class="glass__step">Step 1</span>
+        <h3>Choose Your Phone</h3>
+        <p>Pick the smartphone you love from our range in-store.</p>
+      </div>
+      <div class="glass reveal" style="transition-delay:.09s">
+        <span class="glass__icon">💳</span>
+        <span class="glass__step">Step 2</span>
+        <h3>Share Basic Documents</h3>
+        <p>ID proof and basic details for quick finance approval.</p>
+      </div>
+      <div class="glass reveal" style="transition-delay:.18s">
+        <span class="glass__icon">✅</span>
+        <span class="glass__step">Step 3</span>
+        <h3>Get Instant Approval</h3>
+        <p>Fast approval with minimal paperwork and waiting time.</p>
+      </div>
+      <div class="glass reveal" style="transition-delay:.27s">
+        <span class="glass__icon">💰</span>
+        <span class="glass__step">Step 4</span>
+        <h3>Pay in Easy EMIs</h3>
+        <p>Walk out with your new phone and pay monthly.</p>
+      </div>
+    </div>
+    <div class="finance__split">
+      <div class="reveal">
+        <span style="font-size:2.2rem">🏷️</span>
+        <h3>Why choose our finance option?</h3>
+        <ul class="checks">
+          <li>No need to pay the full amount upfront</li>
+          <li>Flexible monthly EMI plans to suit your budget</li>
+          <li>Quick approval with minimal documentation</li>
+          <li>Available on a wide range of smartphones</li>
+        </ul>
+      </div>
+      <div class="emi-card reveal" style="transition-delay:.15s">
+        <span class="emi-card__label">Ready to Upgrade?</span>
+        <h4>Ask us about EMI plans for the phone you want — we'll explain the options in minutes.</h4>
+        <a href="https://wa.me/919963588815?text=Hi!%20I'd%20like%20to%20know%20about%20EMI%20%2F%20finance%20options%20for%20a%20mobile%20phone." target="_blank" rel="noopener" class="btn btn--solid">💬 Ask About EMI on WhatsApp</a>
+        <small>Finance availability depends on the phone model &amp; provider offers.</small>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============================ CONTACT ============================ -->
+<section class="section section--soft" id="contact">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Contact</span>
+      <h2>Visit Our Store</h2>
+      <p class="lead">Right opposite the Municipal Office on G.T. Road — walk in, call or WhatsApp us anytime during shop hours.</p>
+    </div>
+    <div class="grid contact mt">
+      <div class="contact__list">
+        <div class="card info reveal">
+          <span class="info__icon t-indigo">📍</span>
+          <div>
+            <h3>Shop Address</h3>
+            <p>D.No. 1-1435, Opposite Municipal Office</p>
+            <p>G.T. Road, Mangalagiri</p>
+            <p>Andhra Pradesh – 522503</p>
+            <a class="info__link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Sri%20Kanaka%20Durga%20Cell%20Shoppe%2C%20G.T.%20Road%2C%20Mangalagiri%2C%20Andhra%20Pradesh%20522503">Open in Google Maps →</a>
+          </div>
+        </div>
+        <div class="card info reveal" style="transition-delay:.07s">
+          <span class="info__icon t-emerald">📞</span>
+          <div>
+            <h3>Phone Number</h3>
+            <strong>99635 88815</strong><br>
+            <a class="info__link" href="tel:9963588815">Tap to call now →</a>
+          </div>
+        </div>
+        <div class="card info reveal" style="transition-delay:.14s">
+          <span class="info__icon" style="background:rgba(37,211,102,.15);color:#1faa53">💬</span>
+          <div>
+            <h3>WhatsApp</h3>
+            <p>Chat with us for quick replies.</p>
+            <a class="info__link" target="_blank" rel="noopener" href="https://wa.me/919963588815?text=Hi!%20I%20have%20a%20question%20about%20your%20shop.">Message us on WhatsApp →</a>
+          </div>
+        </div>
+        <div class="card info reveal" style="transition-delay:.21s">
+          <span class="info__icon t-amber">🕒</span>
+          <div>
+            <h3>Opening Hours</h3>
+            <p><strong style="font-size:.88rem;color:#334155">Mon – Sat:</strong> 9:30 AM – 9:00 PM</p>
+            <p><strong style="font-size:.88rem;color:#334155">Sunday:</strong> 10:00 AM – 8:00 PM</p>
+          </div>
+        </div>
+        <div class="card info reveal" style="transition-delay:.28s">
+          <span class="info__icon" style="background:#f1f5f9;color:#334155">👤</span>
+          <div>
+            <h3>Proprietor</h3>
+            <p style="font-weight:700;color:#334155">B.S. Praveen Kumar</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:.15s">
+        <div class="map">
+          <iframe
+            title="Sri Kanaka Durga Cell Shoppe location map"
+            src="https://www.google.com/maps?q=Sri%20Kanaka%20Durga%20Cell%20Shoppe%2C%20G.T.%20Road%2C%20Mangalagiri%2C%20Andhra%20Pradesh%20522503&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact__cta">
+          <h3>Ready to visit or have a question?</h3>
+          <div class="btn-row" style="margin-top:20px">
+            <a href="tel:9963588815" class="btn btn--call">📞 Call Now</a>
+            <a href="https://wa.me/919963588815?text=Hi!%20I'd%20like%20to%20visit%20your%20shop%20%2F%20ask%20a%20question." target="_blank" rel="noopener" class="btn btn--wa">💬 WhatsApp</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sri%20Kanaka%20Durga%20Cell%20Shoppe%2C%20G.T.%20Road%2C%20Mangalagiri%2C%20Andhra%20Pradesh%20522503" target="_blank" rel="noopener" class="btn btn--outline">📍 Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <div class="brand" style="margin-bottom:14px">
+        <span class="brand__mark">📱</span>
+        <span>
+          <span class="brand__name">Sri Kanaka Durga</span>
+          <span class="brand__sub">Cell Shoppe</span>
+        </span>
+      </div>
+      <p>Your trusted neighbourhood mobile store in Mangalagiri for sales, repairs, accessories and recharges.</p>
+      <p class="prop">Proprietor: <span style="color:#e2e8f0">B.S. Praveen Kumar</span></p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#mobiles">Mobiles</a></li>
+        <li><a href="#repair">Repair</a></li>
+        <li><a href="#accessories">Accessories</a></li>
+        <li><a href="#finance">Finance</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li>Mobile Sales</li>
+        <li>Mobile Repair</li>
+        <li>Accessories</li>
+        <li>Recharges</li>
+        <li>EMI / Finance</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>📍 D.No. 1-1435, Opposite Municipal Office, G.T. Road, Mangalagiri, Andhra Pradesh – 522503</li>
+        <li><a href="tel:9963588815">📞 99635 88815</a></li>
+        <li><a href="https://wa.me/919963588815" target="_blank" rel="noopener">💬 WhatsApp Us</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Sri%20Kanaka%20Durga%20Cell%20Shoppe%2C%20G.T.%20Road%2C%20Mangalagiri%2C%20Andhra%20Pradesh%20522503" target="_blank" rel="noopener" style="text-decoration:underline">Open in Google Maps</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bar">
+    <div class="wrap footer__bar-inner">
+      <p>© <span id="year">2026</span> Sri Kanaka Durga Cell Shoppe. All rights reserved.</p>
+      <a href="#home" class="to-top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+<!-- ============================ FLOATING ============================ -->
+<a href="#home" class="to-top-btn" id="toTop" aria-label="Back to top">↑</a>
+<div class="float">
+  <a href="https://wa.me/919963588815?text=Hi!%20I'd%20like%20to%20know%20more%20about%20mobiles%2Fservices%20at%20Sri%20Kanaka%20Durga%20Cell%20Shoppe." target="_blank" rel="noopener" class="float__wa" aria-label="Chat on WhatsApp">💬</a>
+  <a href="tel:9963588815" class="float__call" aria-label="Call now">📞</a>
+</div>
+<script>
+/* ============================================================
+   SRI KANAKA DURGA CELL SHOPPE — all JS embedded (vanilla)
+   ============================================================ */
+(function () {
+  "use strict";
+  var header  = document.getElementById("header");
+  var burger  = document.getElementById("burger");
+  var drawer  = document.getElementById("drawer");
+  var toTop   = document.getElementById("toTop");
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll("#nav a"));
+  var drawerLinks = Array.prototype.slice.call(document.querySelectorAll("#drawer nav a:not(.btn)"));
+  var sections = Array.prototype.slice.call(document.querySelectorAll("section[id]"));
+  /* ---------- mobile menu ---------- */
+  function closeDrawer() {
+    drawer.classList.remove("is-open");
+    burger.setAttribute("aria-expanded", "false");
+    burger.textContent = "☰";
+    document.body.style.overflow = "";
+  }
+  burger.addEventListener("click", function () {
+    var open = drawer.classList.toggle("is-open");
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    burger.textContent = open ? "✕" : "☰";
+    document.body.style.overflow = open ? "hidden" : "";
+  });
+  drawerLinks.forEach(function (link) {
+    link.addEventListener("click", closeDrawer);
+  });
+  /* ---------- sticky header + back-to-top visibility ---------- */
+  function onScroll() {
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    if (y > 24) header.classList.add("is-stuck");
+    else header.classList.remove("is-stuck");
+    if (y > 600) toTop.classList.add("is-visible");
+    else toTop.classList.remove("is-visible");
+    spy(y);
+  }
+  /* ---------- scroll spy ---------- */
+  function spy(y) {
+    var offset = y + 150;
+    var currentId = sections.length ? sections[0].id : "home";
+    sections.forEach(function (sec) {
+      if (sec.offsetTop <= offset) currentId = sec.id;
+    });
+    // snap to last section near the bottom of the page
+    if (window.innerHeight + y >= document.body.offsetHeight - 90) {
+      currentId = sections[sections.length - 1].id;
+    }
+    navLinks.forEach(function (a) {
+      a.classList.toggle("is-active", a.getAttribute("href") === "#" + currentId);
+    });
+    drawerLinks.forEach(function (a) {
+      a.classList.toggle("is-active", a.getAttribute("href") === "#" + currentId);
+    });
+  }
+  var ticking = false;
+  window.addEventListener("scroll", function () {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function () { onScroll(); ticking = false; });
+  }, { passive: true });
+  window.addEventListener("resize", onScroll);
+  onScroll();
+  toTop.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  /* ---------- reveal on scroll ---------- */
+  var revealItems = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -60px 0px" });
+    revealItems.forEach(function (el) { io.observe(el); });
+  } else {
+    revealItems.forEach(function (el) { el.classList.add("is-in"); });
+  }
+  /* ---------- current year ---------- */
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
